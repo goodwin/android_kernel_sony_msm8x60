@@ -27,6 +27,11 @@ enum {
 #define PM_QOS_NETWORK_THROUGHPUT_DEFAULT_VALUE	0
 #define PM_QOS_DEV_LAT_DEFAULT_VALUE		0
 
+struct pm_qos_request_list {
+	struct plist_node list;
+	int pm_qos_class;
+};
+
 struct pm_qos_request {
 	struct plist_node node;
 	int pm_qos_class;
